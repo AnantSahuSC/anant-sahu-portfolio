@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const resumeLink = "/AnantSahu_Resume.pdf";
 
 export default function Portfolio() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   //new lines
   useEffect(() => {
     if (darkMode) {
@@ -36,7 +36,7 @@ export default function Portfolio() {
     //<div className="min-h-screen px-6 py-10 bg-white text-black dark:bg-[#25272a] dark:text-white transition-all duration-300">
     <div className={`min-h-screen transition-colors duration-500 ${darkMode ? "bg-[#25272a] text-white" : "bg-white text-black"}`}>
       <div className="flex justify-between items-center mb-10">
-        <h1 className="text-4xl font-bold">Anant Sahu</h1>
+        <h1 className="text-4xl font-bold dark:text-white text-black">Anant Sahu</h1>
         <div className="flex gap-6 items-center">
           <div className="relative flex gap-3">
             <div
@@ -101,7 +101,7 @@ export default function Portfolio() {
         <section id="about">
           <h2 className="text-2xl font-bold mb-4">About</h2>
           <motion.div initial="hidden" animate="visible" variants={tabAnim}>
-            <p className="text-lg">
+          <p className="text-lg">
               Results-driven Automation Engineer with 6.8 years of experience in software testing and automation using Python, Selenium,
               and UFT. Skilled in robust framework implementation, defect analysis, and delivering quality across web, mobile,
               and client/server systems.
@@ -116,7 +116,8 @@ export default function Portfolio() {
               "Python", "Visual Basic", "SAP ABAP", "SQL", "Mainframe", "Pycharm", "Selenium", "CITS", "UFT",
               "ALM", "GIT", "XRAY", "Odyssey", "Hybrid", "Agile"
             ].map(skill => (
-              <span key={skill} className="bg-blue-600 hover:bg-blue-700 transition-colors text-white px-3 py-1 rounded-full text-sm">{skill}</span>
+              //<span key={skill} className="bg-blue-600 hover:bg-blue-700 transition-colors text-white px-3 py-1 rounded-full text-sm">{skill}</span>
+              <span key={skill} className="bg-blue-600 hover:bg-blue-700 transition-colors text-white dark:text-white px-3 py-1 rounded-full text-sm">{skill}</span>
             ))}
           </motion.div>
         </section>
